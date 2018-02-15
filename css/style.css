@@ -1,0 +1,116 @@
+/* RESETS*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* GENERAL TYPOGRAPHY */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS CUSTOM PROPERTIES */
+:root {
+    /* COLORS */    
+    --colour-primary: #FAFAFA;
+    --colour-primary-light: #FFF;
+    --colour-secondary: #333;
+    --colour-secondary-light: #555;
+    --colour-tertiary: #B28451;
+    --colour-tertiary-light: #C69963;
+
+    /* FONT SIZES */
+    --small-font: 1.6rem;
+    --medium-font: 2rem;
+    --large-font: 3rem;
+    --xlarge-font: 6rem;
+}
+
+/* TYPOGRAPHY */
+.big-heading {
+    font-size: var(--xlarge-font);
+    color: var(--colour-tertiary);
+    margin-top: 3rem;    
+}
+
+.main-heading {
+    font-size: var(--large-font);
+}
+
+.small-heading {
+    font-size: var(--medium-font);
+    color: var(--colour-tertiary);
+    margin-top: 3rem;
+}
+
+.paragraph {
+    font-size: var(--medium-font);
+    margin: 3rem 0;
+}
+
+/* HEADER */
+.header {
+    padding: 5rem;
+    background-color: var(--colour-primary);
+    text-align: center;
+}
+
+.nav__item {
+    font-size: var(--small-font);    
+    text-decoration: none;
+    color: var(--colour-secondary);
+    margin: 0 1rem;  
+    transition: all .3s;       
+}
+
+.nav__item:hover {
+    color: var(--colour-tertiary);
+}
+
+/* MAIN */
+.main {
+    color: var(--colour-secondary);
+}
+
+/* Cipher Definition */
+.definition-section {
+    padding: 10rem 25rem;    
+}
+
+/* Features */
+.features-section {
+    padding: 10rem 25rem;    
+    background-color: var(--colour-primary);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 6rem;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--colour-primary);
+    font-size: var(--small-font);
+    background-color: var(--colour-tertiary-light);
+    padding: 1rem 2rem;
+    transition: all .3s;
+}
+
+.btn:hover {
+    background-color: var(--colour-tertiary);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--colour-secondary-light);
+    color: var(--colour-primary);
+    padding: 3rem;
+    text-align: center;
+}
