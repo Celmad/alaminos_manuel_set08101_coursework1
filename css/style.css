@@ -64,12 +64,15 @@ html {
     font-size: var(--small-font);    
     text-decoration: none;
     color: var(--colour-secondary);
-    margin: 0 1rem;  
+    margin: 0 1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
     transition: all .3s;       
 }
 
 .nav__item:hover {
     color: var(--colour-tertiary);
+    border-bottom: 1px solid var(--colour-tertiary);
 }
 
 /* MAIN */
@@ -99,7 +102,7 @@ html {
     color: var(--colour-primary);
     font-size: var(--small-font);
     background-color: var(--colour-tertiary-light);
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     transition: all .3s;
 }
 
@@ -107,9 +110,49 @@ html {
     background-color: var(--colour-tertiary);
 }
 
+/* Ciphers */
+.cipher-section {
+    padding: 10rem 25rem;
+    background-color: var(--colour-primary);
+}
+
+.cipher {
+    margin: 3rem 0;
+}
+
+.cipher-textarea {
+    width: 100%;
+    height: 20vh;
+    margin: 0 auto;
+    font-size: var(--medium-font);
+    padding: 2rem;
+    border: 1.5px solid var(--colour-secondary);
+    transition: all .3s;
+}
+
+.cipher-textarea-input:focus {
+    border: 1px solid var(--colour-tertiary);
+}
+
+.cipher__btn {
+    border: 1px solid var(--colour-tertiary-light);    
+    font-size: var(--medium-font);
+    cursor: pointer;
+}
+
+.cipher__btn--clear {
+    color: var(--colour-tertiary-light);
+    background-color: var(--colour-primary);
+}
+
+.cipher__btn--clear:hover {
+    color: var(--colour-primary);
+    border: 1px solid var(--colour-tertiary);
+}
+
 /* FOOTER */
 .footer {
-    background-color: var(--colour-secondary-light);
+    background-color: var(--colour-secondary);
     color: var(--colour-primary);
     padding: 3rem;
     text-align: center;
