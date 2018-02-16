@@ -157,3 +157,7 @@ html {
     padding: 3rem;
     text-align: center;
 }
+
+.symbol {
+    font-size: var(--large-font);
+}

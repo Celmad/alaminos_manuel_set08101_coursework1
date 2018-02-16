@@ -29,20 +29,20 @@
         <section class="cipher-section">
             <h2 class="main-heading">Try now!</h2>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-input" name="ceaser-cipher-input" id="ceaser-cipher-input" placeholder="Your message"></textarea>
+                <textarea class="cipher-textarea cipher-textarea-input" name="reverse-cipher-input" id="reverse-cipher-input" placeholder="Your message"></textarea>
             </div>
             <div class="cipher__btns">
-                <button class="btn cipher__btn cipher__btn--encrypt">Encript</button>
-                <button class="btn cipher__btn cipher__btn--clear">Clear</button>
+                <button class="btn cipher__btn cipher__btn--encrypt" onclick="reverseCipher()">Encript</button>
+                <button class="btn cipher__btn cipher__btn--clear" onclick="clearReverse()">Clear</button>
             </div>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-output" name="ceaser-cipher-output" id="ceaser-cipher-output" disabled></textarea>
+                <textarea class="cipher-textarea cipher-textarea-output" name="reverse-cipher-output" id="reverse-cipher-output" disabled></textarea>
             </div>
         </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
-        <p class="paragraph">Made with love and coffee by Manuel Alaminos</p>
+        <p class="paragraph">Made with <span class="symbol">&#9825;</span> and <span class="symbol">&#9749;</span> by Manuel Alaminos</p>
     </footer>
 
     <script src="../js/script.js"></script>    
