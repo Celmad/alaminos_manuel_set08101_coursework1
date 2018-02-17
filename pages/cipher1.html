@@ -12,7 +12,7 @@
     <header class="header">
         <nav class="nav">
             <a href="../index.html" class="nav__item">Home</a>
-            <a href="#" class="nav__item">Cipher 1</a>
+            <a href="#" class="nav__item nav__item--active">Cipher 1</a>
             <a href="cipher2.html" class="nav__item">Cipher 2</a>
             <a href="design.html" class="nav__item">Design</a>
         </nav>
@@ -23,20 +23,20 @@
         <!-- Cipher Definition -->
         <section class="definition-section">
             <h2 class="main-heading">What is Caesar Cipher?</h2>
-            <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quasi debitis dolores assumenda, rerum rem. Quod provident blanditiis aliquid sunt nobis. Illum dolore, expedita a soluta at eum id non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam modi quia maiores hic dolores aut a, sit, explicabo illo dignissimos soluta. Beatae asperiores molestias ipsum, animi ipsa quae officia?</p>
+            <p class="paragraph"></p>
         </section>
         <!-- Cipher Tool-->
         <section class="cipher-section">
             <h2 class="main-heading">Try now!</h2>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-input" name="caesar-cipher-input" id="caesar-cipher-input" placeholder="Your message"></textarea>
+                <textarea class="cipher__textarea cipher__textarea--input" name="caesar-cipher-input" id="caesar-cipher-input" placeholder="Your message"></textarea>
             </div>
             <div class="cipher__btns">
                 <button class="btn cipher__btn cipher__btn--encrypt" onclick="rot13()">Encript</button>
                 <button class="btn cipher__btn cipher__btn--clear" onclick="clearCaesar()">Clear</button>
             </div>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-output" name="caesar-cipher-output" id="caesar-cipher-output" disabled></textarea>
+                <textarea class="cipher__textarea cipher__textarea--output" name="caesar-cipher-output" id="caesar-cipher-output" disabled></textarea>
             </div>
         </section>
     </main>

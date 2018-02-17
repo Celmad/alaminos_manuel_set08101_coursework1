@@ -13,7 +13,7 @@
         <nav class="nav">
             <a href="../index.html" class="nav__item">Home</a>
             <a href="cipher1.html" class="nav__item">Cipher 1</a>
-            <a href="#" class="nav__item">Cipher 2</a>
+            <a href="#" class="nav__item nav__item--active">Cipher 2</a>
             <a href="design.html" class="nav__item">Design</a>
         </nav>
         <h1 class="big-heading">Classical Cipher - Reversed</h1>
@@ -29,14 +29,14 @@
         <section class="cipher-section">
             <h2 class="main-heading">Try now!</h2>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-input" name="reverse-cipher-input" id="reverse-cipher-input" placeholder="Your message"></textarea>
+                <textarea class="cipher__textarea cipher__textarea--input" name="reverse-cipher-input" id="reverse-cipher-input" placeholder="Your message"></textarea>
             </div>
             <div class="cipher__btns">
                 <button class="btn cipher__btn cipher__btn--encrypt" onclick="reverseCipher()">Encript</button>
                 <button class="btn cipher__btn cipher__btn--clear" onclick="clearReverse()">Clear</button>
             </div>
             <div class="cipher">
-                <textarea class="cipher-textarea cipher-textarea-output" name="reverse-cipher-output" id="reverse-cipher-output" disabled></textarea>
+                <textarea class="cipher__textarea cipher__textarea--output" name="reverse-cipher-output" id="reverse-cipher-output" disabled></textarea>
             </div>
         </section>
     </main>
