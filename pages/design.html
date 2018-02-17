@@ -16,14 +16,140 @@
             <a href="cipher2.html" class="nav__item">Cipher 2</a>
             <a href="#" class="nav__item nav__item--active">Design</a>
         </nav>
-        <h1 class="big-heading">Classical Cipher - Design</h1>
+        <h1 class="big-heading">Design Documentation</h1>
     </header>
-    
+    <!-- Design Explanation -->
+    <section class="definition-section">
+        <!-- Introduction -->
+        <h2 class="main-heading">Introduction to this Style Guide</h2>
+        <p class="paragraph">This documentation is meant to serve as a design guide of this website for myself and any other developer that wants to make use of it. Feedback is more than welcome!</p>
+        <!-- Technologies -->
+        <h2 class="main-heading">Technologies</h2>
+        <p class="paragraph">It is a requirement NOT to use any kind of library, framework, CSS preprocessors, external fonts, icons and so on. The website has exclusively been made thanks to HTML, CSS and (Vanilla)JavaScript. Nothing else, nothing more.</p>
+        <p class="paragraph">However, it is recommended to use modern and advanced techniques within these three languages, for example, <a class="links" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Flexbox</a>, <a class="links"href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grid</a>, <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS Custom Properties</a>, Media Queries, semantic HTML5 tags and <a class="links" href="https://www.w3schools.com/charsets/ref_utf_symbols.asp">symbols</a>, etc.</p>
+        <p class="paragraph">Support for older or not modern browsers is not necessary.</p>
+
+        <!-- Code -->
+        <h2 class="main-heading">Code</h2>
+        <p class="paragraph">4 space per tab indent.</p>
+
+        <!-- CSS BEM Method -->
+        <h2 class="main-heading">CSS BEM Methodology</h2>
+        <p class="paragraph"><a class="links" href="http://getbem.com/">BEM</a>(Block - Element - Modifier) CSS naming methodology has been used in this site. Although not using 100% of its capabilities due to the lack of CSS Preprocessor, which would allow us to indent our CSS code, it is still very useful, pretty semantic and allow us to keep a DRY code style. It is very easy to maintain and easily scalable.</p>
+        <code class="code">
+            class="cipher__textarea cipher__textarea--input"
+        </code>
+
+        <!-- Resets -->
+        <h2 class="main-heading">Browser Style Resets</h2>
+        <p class="paragraph">Browser styles have been resets as follows:</p>
+        <code class="code">
+            /* RESETS*/ <br>
+            *, <br>
+            *::before, <br>
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: inherit;
+            }
+        </code>
+
+        <!-- Typography and Use of Rem -->
+        <h2 class="main-heading">Typography and Use of 'rem'</h2>
+        <p class="paragraph">Except very small units like 1-5px, it is necessary to use rems, which will scale from the root.</p>
+        <p class="paragraph">The root font size is set in a way which makes it very easy to work with rems</p>
+        <code class="code">
+            /* GENERAL TYPOGRAPHY */ <br>
+            html { <br>
+                box-sizing: border-box; <br>
+                font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */ <br>
+                font-family: Arial, Helvetica, sans-serif; <br>
+                line-height: 1.6; <br>
+                letter-spacing: 1px; <br>
+            }
+        </code>
+
+        <!-- CSS Custome Properties -->
+        <h2 class="main-heading">CSS Custom Properties</h2>
+        <p class="paragraph">CSS variables should be used for all font sizes and colours. All variables must be set up within the :root tag.</p>
+        <code class="code">
+            * CSS CUSTOM PROPERTIES */ <br>
+            :root { <br>
+                /* COLORS */ <br>    
+                --colour-primary: #FAFAFA;<br> 
+                --colour-primary-light: #FFF;<br>
+                --colour-secondary: #333;<br>
+                --colour-secondary-light: #555;<br>
+                --colour-tertiary: #B28451;<br>
+                --colour-tertiary-light: #C69963;<br>
+                <br>
+                /* FONT SIZES */<br>
+                --small-font: 1.6rem;<br>
+                --medium-font: 2rem;<br>
+                --large-font: 3rem;<br>
+                --xlarge-font: 6rem;<br>
+            }
+        </code>
+        <p class="paragraph">However, it is not recommended to use more colours than what is already set up. Three colours with two different shades each is perfect for the purpose of this website, keeping things simple.</p>
+        <p class="paragraph">Notice that if you want to change the size of a specific variable you will only have to modify it in this :root tag and it will then be applied to all the elements that are using said variable.</p>
+        
+        <!-- Typography -->
+        <h2 class="main-heading">Specific Typographies</h2>
+        <p class="paragraph">Near the top of the stylesheet and just before the start of the general structure of the website (header styles), we find the specific styles for different headings, paragraphs, code and links tags. Which make it easily accessible.</p>
+        <code class="code">
+            /* TYPOGRAPHY */ <br>
+            .big-heading {<br>
+                font-size: var(--xlarge-font);<br> 
+                color: var(--colour-tertiary);<br>
+                margin-top: 3rem; <br>
+            }
+        </code>
+        <p class="paragraph">Font colour is the secondary colour #333 for the most part.  When there are important headings, links or call to actions buttons, then we will use the tertiary colour #B28451, and its darker version #C69963 for some of those elements when mouse overing. Fonts that are standing in a dark background #333 or #555, will use the primary colour #FAFAFA</p>
+
+        <!-- Page Structure-->
+        <h2 class="main-heading">Page Structure</h2>
+        <p class="paragraph">The page structure is very simple and consistent throughout the different pages.</p>
+        <ul class="list">
+            <li class="list__item">Header</li>
+            <li class="list__item">Main</li>
+            <ul class="sub-list">
+                <li class="list__item">Definition</li>
+                <li class="list__item">Features / Cipher Tools</li>
+            </ul>
+            <li class="list__item">Footer</li>
+        </ul>
+
+        <!-- Background Colours -->
+        <h2 class="main-heading">Background Colours</h2>
+        <p class="paragraph">The header is using the primary colour #FAFAFA.</p>
+        <p class="paragraph">The main content of the website will have diferent background colour depending on the section. Definition section, always the first one, should have the primary light colour #FFF. The next section however, will have the primary colour #FAFAFA again, to help differenciate between sections and keep consistency and contrast.</p>
+        <p class="paragraph">The Footer must has a dark colour to "close" the website. The use of the secondary colour #333 is highly recommended.</p>
+
+        <!-- Borders -->
+        <h2 class="main-heading">Borders</h2>        
+        <p class="paragraph">Borders found in menu items, text area input and buttons in the cipher tools, are all 1px solid. Borders are always right angles in the corners, not radius should be used. Borders should exclusively be used when there is some kind of interaction with a specific element on the page.</p>
+
+        <!-- Transitions -->
+        <h2 class="main-heading">Transitions</h2>
+        <p class="paragraph">Transitions are consistent thoughout the whole website with a duration of 0.3 seconds. Transitions and animations should not be over used, which helps to keep the website as intendet, simple and lightweight.</p>
+
+        <!-- Margins, Paddings, Width, Height -->
+        <h2 class="main-heading">Margins, Paddings, Width and Height</h2>
+        <p class="paragraph">We will make use of dynamic units such as rem, % and viewports (vh and vw) to position our different elements in the website. It is more flexible and makes our job easier in media queries.</p>
+        <p class="paragraph">The different sections within the main content shared the same padding to keep the whitespace consistent.</p>
+        <code class="code">
+            .definition-section, <br>
+            .features-section, <br>
+            .cipher-section { <br>
+                padding: 5rem 25rem 10rem 25rem; <br>   
+            }
+        </code>
+
+    </section>
     <!-- Footer -->
     <footer class="footer">
         <p class="paragraph">Made with <span class="symbol">&#9825;</span> and <span class="symbol">&#9749;</span> by Manuel Alaminos</p>
     </footer>
 
-    <script src="../js/script.js"></script>    
 </body>
 </html>
