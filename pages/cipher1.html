@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classical Cipher - Caesar</title>
+    <link rel="stylesheet" href="../css/style.css">    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav__item">Home</a>
+            <a href="#" class="nav__item nav__item--active">Cipher 1</a>
+            <a href="cipher2.html" class="nav__item">Cipher 2</a>
+            <a href="cipher3.html" class="nav__item">Cipher 3</a>
+            <a href="design.html" class="nav__item">Design</a>
+        </nav>
+        <h1 class="big-heading">Classical Cipher - Caesar</h1>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <!-- Cipher Definition -->
+        <section class="definition-section">
+            <h2 class="main-heading">What is Caesar Cipher?</h2>
+            <p class="paragraph">Caesar Cipher is one of the simplest and most used encryption techniques. It is part of the subtitution cipher family. It is also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift. The way it works is by changing every letter by a number of positions in the alphabet. For example, a shift of 3 can be represented as follow:</p>
+            <p class="paragraph">Plain: ABCDEFGHIJKLMNOPQRSTVWXZ<br>Cipher: DEFGHIJKLMNOPQRSTUVXYZABC</p>
+            <p class="paragraph">Now it is your turn to try out our tool and maybe try to guess which kind of Caesar Cipher it is!</p>
+        </section>
+        <!-- Cipher Tool-->
+        <section class="cipher-section">
+            <h2 class="main-heading">Try now!</h2>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--input" name="caesar-cipher-input" id="caesar-cipher-input" placeholder="Your message"></textarea>
+            </div>
+            <div class="cipher__btns">
+                <button class="btn cipher__btn cipher__btn--encrypt" onclick="rot13()">Encrypt</button>
+                <button class="btn cipher__btn cipher__btn--clear" onclick="clearCaesar()">Clear</button>
+            </div>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--output" name="caesar-cipher-output" id="caesar-cipher-output" disabled></textarea>
+            </div>
+        </section>
+    </main>
+    <!-- Back to top -->
+    <a href="#" class="btn btn__back-to-top">&uarr;</a> 
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="paragraph">Made with <span class="symbol">&#9825;</span> and <span class="symbol">&#9749;</span> by Manuel Alaminos</p>
+    </footer>
+
+    <script src="../js/script.js"></script>    
+</body>
+</html>

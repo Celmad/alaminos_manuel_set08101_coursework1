@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classical Cipher - Reversed</title>
+    <link rel="stylesheet" href="../css/style.css">    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav__item">Home</a>
+            <a href="cipher1.html" class="nav__item">Cipher 1</a>
+            <a href="#" class="nav__item nav__item--active">Cipher 2</a>
+            <a href="cipher3.html" class="nav__item">Cipher 3</a>
+            <a href="design.html" class="nav__item">Design</a>
+        </nav>
+        <h1 class="big-heading">Classical Cipher - Reverse</h1>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <!-- Cipher Definition -->
+        <section class="definition-section">
+            <h2 class="main-heading">What is Reverse Cipher?</h2>
+            <p class="paragraph">The Reverse Cipher, or also called Backwards Cipher, is probably the simplest of all the Transposition Ciphers methods. In the transposition method, the position of the letters is what is alterated but not the letters themself.</p>
+            <p class="paragraph">In this case, the sentence will be reversed. Simple but funny, isn't it? </p>
+        </section>
+        <!-- Cipher Tool-->
+        <section class="cipher-section">
+            <h2 class="main-heading">Try now!</h2>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--input" name="reverse-cipher-input" id="reverse-cipher-input" placeholder="Your message"></textarea>
+            </div>
+            <div class="cipher__btns">
+                <button class="btn cipher__btn cipher__btn--encrypt" onclick="reverseCipher()">Encrypt</button>
+                <button class="btn cipher__btn cipher__btn--clear" onclick="clearReverse()">Clear</button>
+            </div>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--output" name="reverse-cipher-output" id="reverse-cipher-output" disabled></textarea>
+            </div>
+        </section>
+    </main>
+    <!-- Back to top -->
+    <a href="#" class="btn btn__back-to-top">&uarr;</a> 
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="paragraph">Made with <span class="symbol">&#9825;</span> and <span class="symbol">&#9749;</span> by Manuel Alaminos</p>
+    </footer>
+
+    <script src="../js/script.js"></script>    
+</body>
+</html>
