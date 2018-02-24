@@ -184,11 +184,13 @@ html {
 
 .cipher__btn--encrypt {
     margin-right: 1rem;
+    outline: none;
 }
 
 .cipher__btn--clear {
     color: var(--colour-tertiary-light);
     background-color: var(--colour-primary);
+    outline: none;
 }
 
 .cipher__btn--clear:hover {
