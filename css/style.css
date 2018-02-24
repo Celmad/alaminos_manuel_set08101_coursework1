@@ -18,7 +18,7 @@ html {
 
 /* CSS CUSTOM PROPERTIES */
 :root {
-    /* COLORS */    
+    /* COLOURS */    
     --colour-primary: #FAFAFA;
     --colour-primary-light: #FFF;
     --colour-secondary: #333;
@@ -207,6 +207,41 @@ html {
     color: var(--colour-tertiary);    
 }
 
+/* DESIGN */
+.draw-page {
+    display: inline-block;
+    width: 30vw;
+    font-size: var(--small-font);
+}
+
+.draw-page > *,
+.draw-main > * {
+    padding: 2rem;
+    border: solid 1px var(--colour-secondary);
+    /* margin: 1px; */
+}
+
+.draw-page--colour {
+    border: solid 1px var(--colour-secondary);
+}
+.draw-page--colour > * {
+    border: none;
+}
+
+.draw-header--primary,
+.draw-section--primary {
+    background-color: var(--colour-primary);
+}
+
+.draw-section--primary-light {
+    background-color: var(--colour-primary-light);
+}
+
+.draw-footer--tertiary {
+    background-color: var(--colour-secondary);
+    color: var(--colour-primary);
+}
+
 /* MEDIA QUERIES */
 @media all and (max-width: 1250px) {
     .definition-section,
@@ -220,6 +255,10 @@ html {
     html {
         font-size: 50%;
     }
+
+    .draw-page {
+        width: 50vw;
+    }    
 }
 
 @media all and (max-width: 700px) {
@@ -227,6 +266,10 @@ html {
     .features-section,
     .cipher-section {
         padding: 2rem 10rem;    
+    }
+
+    .draw-page {
+        width: 70vw;
     }
 }
 
