@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classical Cipher - Atbash</title>
+    <link rel="stylesheet" href="../css/style.css">    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav__item">Home</a>
+            <a href="cipher1.html" class="nav__item">Cipher 1</a>
+            <a href="cipher2.html" class="nav__item">Cipher 2</a>
+            <a href="#" class="nav__item nav__item--active">Cipher 3</a>
+            <a href="design.html" class="nav__item">Design</a>
+        </nav>
+        <h1 class="big-heading">Classical Cipher - Atbash</h1>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <!-- Cipher Definition -->
+        <section class="definition-section">
+            <h2 class="main-heading">What is Atbash Cipher?</h2>
+            <p class="paragraph">The Atbash cipher was originally used to encode the Hebrew alphabet, but as a monoalphabetic substitution cipher, it can be easily adapted to any other kind of alphabetic or numeral collating order. This is, a fixed and ordered list of letters or numbers. Latin included of course!</p>
+            <p class="paragraph">As opposite to the Reverse cipher, the Atbash cipher doesn't reverse whole sentences but individual letters to its opposite position. This means that the first letter become the latest, the second becomes the one before the latest and so on. That's very cool!!</p>
+        </section>
+        <!-- Cipher Tool-->
+        <section class="cipher-section">
+            <h2 class="main-heading">Try now!</h2>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--input" name="atbash-cipher-input" id="atbash-cipher-input" placeholder="Your message"></textarea>
+            </div>
+            <div class="cipher__btns">
+                <button class="btn cipher__btn cipher__btn--encrypt" onclick="atbashCipher()">Encrypt</button>
+                <button class="btn cipher__btn cipher__btn--clear" onclick="clearAtbash()">Clear</button>
+            </div>
+            <div class="cipher">
+                <textarea class="cipher__textarea cipher__textarea--output" name="atbash-cipher-output" id="atbash-cipher-output" disabled></textarea>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="paragraph">Made with <span class="symbol">&#9825;</span> and <span class="symbol">&#9749;</span> by Manuel Alaminos</p>
+    </footer>
+
+    <script src="../js/script.js"></script>    
+</body>
+</html>

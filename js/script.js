@@ -1,42 +1,74 @@
 // CAESAR CIPHER
-var caesarInput = document.getElementById("caesar-cipher-input");    
-var caesarOutput = document.getElementById("caesar-cipher-output");
+const CAESAR_INPUT = document.getElementById("caesar-cipher-input");    
+const CAESAR_OUTPUT = document.getElementById("caesar-cipher-output");
 
 function rot13() {
-    var str = caesarInput.value.toLowerCase();
-    var encrypted ="";
+    let str = CAESAR_INPUT.value.toLowerCase();
+    let encrypted ="";
 
-    for (var i in str) {
+    for (let i in str) {
         if (str.charCodeAt(i) < 97 || str.charCodeAt(i) > 122) {
             encrypted += str[i];
             continue;
         }
-        if (str.charCodeAt(i) < 110) {
-            encrypted += String.fromCharCode(str.charCodeAt(i) + 13);
-        }
-        else {
-            encrypted += String.fromCharCode(str.charCodeAt(i) - 13);
-        }
+        str.charCodeAt(i) < 110 ? encrypted += String.fromCharCode(str.charCodeAt(i) + 13) : encrypted += String.fromCharCode(str.charCodeAt(i) - 13);
+        // Without ternary conditional, it would look like:
+        //
+        // if (str.charCodeAt(i) < 110) {
+        //     encrypted += String.fromCharCode(str.charCodeAt(i) + 13);
+        // }
+        // else {
+        //     encrypted += String.fromCharCode(str.charCodeAt(i) - 13);
+        // }
     }
-    caesarOutput.value = encrypted;
+    CAESAR_OUTPUT.value = encrypted;
 }
 
 function clearCaesar() {
-    caesarInput.value = "";
-    caesarOutput.value = "";    
+    CAESAR_INPUT.value = "";
+    CAESAR_OUTPUT.value = "";    
 }
 
 // REVERSED CIPHER
-var reverseInput = document.getElementById("reverse-cipher-input");
-var reverseOutput = document.getElementById("reverse-cipher-output");
+const REVERSE_INPUT = document.getElementById("reverse-cipher-input");
+const REVERSE_OUTPUT = document.getElementById("reverse-cipher-output");
 
 function reverseCipher() {
-    var str = reverseInput.value;
-    var encrypted = str.split("").reverse().join("");
-    reverseOutput.value = encrypted;
+    let str = REVERSE_INPUT.value;
+    let encrypted = str.split("").reverse().join("");
+    REVERSE_OUTPUT.value = encrypted;
 }
 
 function clearReverse() {
-    reverseInput.value = "";
-    reverseOutput.value = "";    
+    REVERSE_INPUT.value = "";
+    REVERSE_OUTPUT.value = "";    
+}
+
+// ATBASH CIPHER
+const ATBASH_INPUT = document.getElementById("atbash-cipher-input");
+const ATBASH_OUTPUT = document.getElementById("atbash-cipher-output");
+
+function atbashCipher() {
+    let str = ATBASH_INPUT.value;
+    let encrypted = [];
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (char.match(/[a-z]/i)) {
+            let code = char.charCodeAt(0);
+            if (code >= 65 && code <= 90) {
+                char = String.fromCharCode(((13 - (code - 65)) + 12) + 65);
+            }
+            else if (code >= 97 && code <= 122) {
+                char = String.fromCharCode(((13 - (code - 97)) + 12) + 97);
+            }
+        }
+        encrypted += char;
+    }
+    ATBASH_OUTPUT.value = encrypted;
+}
+
+function clearAtbash() {
+    ATBASH_INPUT.value = "";
+    ATBASH_OUTPUT.value = "";    
 }
