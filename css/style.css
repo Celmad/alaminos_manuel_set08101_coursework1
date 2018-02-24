@@ -194,6 +194,16 @@ html {
     border: 1px solid var(--colour-tertiary);
 }
 
+/* BACK TO TOP BUTTON */
+.btn__back-to-top {
+    position: fixed;
+    z-index: 2;
+    right: 5rem;
+    bottom: 5rem;
+    font-size: var(--large-font);
+    padding: 1rem 2rem;
+}
+
 /* FOOTER */
 .footer {
     background-color: var(--colour-secondary);
